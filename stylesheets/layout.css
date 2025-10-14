@@ -205,12 +205,14 @@ blockquote ::before {
 }
 
 /* стили для about.html */
-#about {
+#about,
+#about section,
+#about section div {
   overflow-x: hidden;
 }
-#about::after {
+/* #about::after {
   content: "";
-  /* background-image: url("../images/1440.png"); */
+  background-image: url("../images/1440.png");
   width: 1440px;
   height: 3120px;
   display: block;
@@ -219,7 +221,7 @@ blockquote ::before {
   top: 0;
   left: calc(50% - 720px);
   opacity: 0.2;
-}
+} */
 #about section {
   width: 1440px;
   margin: 0 auto;
@@ -272,4 +274,44 @@ blockquote ::before {
   width: 1050px;
   margin: 10px 0 0 10px;
   border-left: 1px solid #eee;
+}
+#about #fourthSection {
+  flex-direction: column;
+  width: 700px;
+  align-items: center;
+  padding: 120px 0;
+}
+#fourthSection h2,
+#fourthSection p {
+  text-align: center;
+}
+#about #fourthSection div {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#fourthSection a {
+  text-decoration: none;
+  border: 1px solid gray;
+  color: gray;
+  padding: 20px 55px;
+  border-radius: 4px;
+  transition: all ease 0.3s;
+}
+#fourthSection a:hover {
+  border: 1px solid black;
+  color: black;
+  transition: all ease 0.6s;
+}
+#fourthSection a.black {
+  color: #eee;
+  background-color: #343434;
+  border: 1px solid #343434;
+}
+#fourthSection a.black:hover {
+  color: #eee;
+  background-color: #000000;
+  border: 1px solid #000000;
 }
